@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/film_system?serverTimezone=Asia/Shanghai&characterEncoding=utf8
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  redis:
+    database: 0
+    host: 47.100.79.28
+    prot: 6379
+
+mybatis:
+  configuration:
+          log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+          map-underscore-to-camel-case: true
+
+##微信开发平台配置
+wxopen:
+  appid: wx025575eac69a2d5b
+  appsecret: deeae310a387fa9d3e8f3830ce64caac
+  #重定向url
+  redirect_url: http://www.16web.net/api/v1/wechat/user/callback
+
+  #支付配置
+  #微信商户平台
+wxpay:
+  appid: wx5beac15ca207c40c
+  appsecret: 554801238f17fd6f96b382fe548215e9
+  callback: 16web.com/api/v1/wechat/order/callback
+  key: xdclassdevsq2018xdclass2018x018d
+  mer_id: 1503809911
+
